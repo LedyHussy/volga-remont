@@ -1,9 +1,12 @@
-.btn(@btnwidth: 300px; @btnheight: 52px; @btnbg: @greencolor;@btnbgh: fade(@greencolor,80%); @btncolor: @cf; @btncolorh: @cf){
+.btn(@btnwidth: 300px; @btnheight: 52px; @btnbg: @greencolor;@btnbgh: fade(@btnbg,80%); @btncolor: @cf; @btncolorh: @cf){
   border-radius: 4px;
   width: @btnwidth;
   height: @btnheight;
   background-color: @btnbg;
   transition: all ease-in-out 0.3s;
+  border: 1px solid @btncolor;
+  padding: 0;
+  margin: 0;
   .font();
   color: @btncolor;
   line-height: @btnheight;
@@ -11,6 +14,7 @@
   &:hover{
     background-color: @btnbgh;
     color: @btncolorh;
+    border-color: @btncolorh;
   }
 }
 

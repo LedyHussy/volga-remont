@@ -1,12 +1,28 @@
-@font-face {
-  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
-  font-family: "ProximaNova";
-  // адрес шрифта и тип
-  src: url("../font/ProximaNova.ttf") format("truetype");
-  font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Prosto+One&family=Raleway:wght@100;300&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.title{
+  .font(@ff-fam: @title, @ff-size: 32px, @ff-weight: 600);
+  margin-bottom: 40px;
+  @media(min-width: 576px){
+    font-size: 36px;
+  }
+  @media(min-width: 992px){
+    font-size: 44px;
+  }
+}
+.sup_title{
+  .font(@ff-fam: @subtitle, @ff-size: 22px, @ff-weight: 300);
 }
 
-.bold{
-  font-weight: 700;
+.block_title{
+  .font(@ff-fam: @blocktitle, @ff-size: 18px, @ff-weight: 600);
 }
 
+.text{
+  .font(@ff-fam: @text, @ff-size: 16px, @ff-weight: 400);
+}
+
+.text_bg{
+  background-color: @text_bg;
+  color: @cf;
+}

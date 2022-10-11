@@ -5,7 +5,7 @@
   left: 0;
   display: none;
   z-index: 999999;
-  background-color: fade(@darkblue, 80%);
+  background-color: fade(@text_bg, 80%);
   &_body{
     position: absolute;
     padding: 20px;
@@ -32,7 +32,7 @@
       height: 4px;
       position: absolute;
       transition: all ease-in-out 0.2s;
-      background: @darkgradient;
+
     }
     &:after{
       transform: rotate(45deg);
@@ -42,7 +42,7 @@
     }
     &:hover{
       &:after,&:before{
-        background: @blurgradient;
+
       }
     }
   }

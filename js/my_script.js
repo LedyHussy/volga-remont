@@ -6,7 +6,7 @@ $(document).ready(function() {
         var t = 1000;
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
         $('html,body').stop().animate({
-            scrollTop: $(d).offset().top
+            scrollTop: $(d).offset().top - 100
         }, t);
     });
 });
@@ -16,3 +16,9 @@ $(document).ready(function() {
 jQuery(function($) {
     $(".phone-mask").mask("+7 (999) 999-99-99");
 });
+
+/// menu
+$('.nav_toggle').click(function () {
+    $('.nav_mobile').slideToggle('slow');
+    $(this).toggleClass('active');
+})
