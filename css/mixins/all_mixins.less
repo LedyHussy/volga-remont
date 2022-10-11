@@ -1,0 +1,16 @@
+.btn(@btnwidth: 300px; @btnheight: 52px; @btnbg: @greencolor;@btnbgh: fade(@greencolor,80%); @btncolor: @cf; @btncolorh: @cf){
+  border-radius: 4px;
+  width: @btnwidth;
+  height: @btnheight;
+  background-color: @btnbg;
+  transition: all ease-in-out 0.3s;
+  .font();
+  color: @btncolor;
+  line-height: @btnheight;
+  text-align: center;
+  &:hover{
+    background-color: @btnbgh;
+    color: @btncolorh;
+  }
+}
+

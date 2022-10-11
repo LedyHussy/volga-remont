@@ -1,0 +1,139 @@
+/**
+ * Подключаем шрифты
+ */
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../font/ProximaNova.ttf") format("truetype");
+  font-style: normal;
+}
+.bold {
+  font-weight: 700;
+}
+/**
+ * Подключаем миксины
+ */
+/**
+ * Подключаем переменные
+ */
+/*Основные цвета */
+/*Основные размер/высота текста */
+/**
+ * Подключаем модалки
+ */
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 999999;
+  background-color: rgba(18, 30, 90, 0.8);
+}
+.modal_body {
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  background-color: #ffffff;
+}
+.modal_close {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 999999;
+}
+.modal_close:after,
+.modal_close:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  background: linear-gradient(100.74deg, #314c7c 0%, #323750 100%);
+}
+.modal_close:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.modal_close:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.modal_close:hover:after,
+.modal_close:hover:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2e72cf), to(#044db0));
+  background: linear-gradient(180deg, #2e72cf 0%, #044db0 100%);
+}
+.modal_open {
+  cursor: pointer;
+}
+.modal_on {
+  overflow: hidden;
+}
+/**
+ * Подключчаем стили для тела
+ */
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: -50px 50px 0 0 #ff0000;
+          box-shadow: -50px 50px 0 0 #ff0000;
+}
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  -webkit-box-shadow: 50px 50px 0 0 red;
+          box-shadow: 50px 50px 0 0 red;
+}
+#curved-corner-topleft:before {
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: -50px -50px 0 0 #ff0000;
+          box-shadow: -50px -50px 0 0 #ff0000;
+}
+#curved-corner-topright:before {
+  top: 0;
+  right: 0;
+  -webkit-box-shadow: 50px -50px 0 0 #ff0000;
+          box-shadow: 50px -50px 0 0 #ff0000;
+}
+/**
+* media
+ */
