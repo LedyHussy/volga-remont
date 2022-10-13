@@ -8,11 +8,22 @@
   background-color: fade(@text_bg, 80%);
   &_body{
     position: absolute;
-    padding: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    background-color: @cf;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: scroll;
+    &_wrapp{
+      background-color: @lite;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      min-height: 100%;
+      .title{
+        margin-bottom: 20px;
+      }
+    }
   }
   &_close{
     width: 34px;
@@ -25,6 +36,8 @@
     top: 10px;
     cursor: pointer;
     z-index: 999999;
+    opacity: 0.6;
+    transition: all ease-in-out 0.3s;
     &:after,&:before{
       content: "";
       display: inline-block;
@@ -32,6 +45,7 @@
       height: 4px;
       position: absolute;
       transition: all ease-in-out 0.2s;
+      background-color: @text_bg;
 
     }
     &:after{
@@ -41,9 +55,7 @@
       transform: rotate(-45deg);
     }
     &:hover{
-      &:after,&:before{
-
-      }
+      opacity: 1;
     }
   }
   &_open{
@@ -51,5 +63,32 @@
   }
   &_on{
     overflow: hidden;
+  }
+  @media(min-width: 576px){
+    &_body{
+      padding: 40px 0;
+      &_wrapp{
+        min-height: auto;
+      }
+    }
+    &_close{
+      top: 50px;
+      left: ~'calc(50% + 230px)';
+    }
+  }
+  @media(min-width: 768px){
+    &_close{
+      left: ~'calc(50% + 310px)';
+    }
+  }
+  @media(min-width: 992px){
+    &_close{
+      left: ~'calc(50% + 430px)';
+    }
+  }
+  @media(min-width: 1200px){
+    &_close{
+      left: ~'calc(50% + 520px)';
+    }
   }
 }

@@ -22,3 +22,35 @@ $('.nav_toggle').click(function () {
     $('.nav_mobile').slideToggle('slow');
     $(this).toggleClass('active');
 })
+
+$(document).ready(function() {
+    $("#form_modal").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $("#call").fadeOut();
+            $(this).find("input").val("");
+            $('#ths').fadeIn();
+            $("#form_modal").trigger("reset");
+        });
+        return false;
+    });
+});
+
+
+$(document).ready(function() {
+    $("#form_full").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#ths').fadeIn();
+            $("#form_full").trigger("reset");
+        });
+        return false;
+    });
+});

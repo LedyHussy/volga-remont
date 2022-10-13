@@ -360,6 +360,7 @@ xrotate-2
   -o-transform: translateZ(-20px) rotateX(90deg);
   transform: translateZ(-20px) rotateX(90deg);
   opacity: 0;
+  font-style: normal;
 }
 .is-visible .cd-headline.rotate-2 i {
   opacity: 1;
